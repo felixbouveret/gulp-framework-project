@@ -1,0 +1,26 @@
+@each $name, $code in $colors {
+
+  @for $i from 1 through 10 {
+
+    .text-#{$name}-#{$i * 10} {
+      
+      color: rgba($code, $i / 10);
+    }
+  }
+
+  @for $i from 1 through 10 {
+
+    .background-#{$name}-#{$i * 10} {
+
+      background-color: rgba($code, $i / 10);
+    }
+  }
+
+  @for $i from 1 through 10 {
+
+    .border-#{$name}-#{$i * 10} {
+
+      border-color: rgba($code, $i / 10);
+    }
+  }
+}

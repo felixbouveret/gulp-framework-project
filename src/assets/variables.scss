@@ -1,0 +1,17 @@
+$columnNumber : 12;
+$margin :       8px;
+
+// Media queries made for mobilefirst 
+$medias: (
+  'sm-':        0,         // Small
+  'md-':        720px,     // Medium
+  '':           960px,     // Desktop
+  'lg-':        1200px     // Large
+);
+
+$colors: (
+  'white':      #ffffff,
+  'black':      #000000,
+  'main':       #005fcc,
+  'secondary':  #ccbe00
+);

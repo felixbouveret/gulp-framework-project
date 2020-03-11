@@ -1,0 +1,45 @@
+.flex-grid {
+  overflow-x: hidden;
+  > div {
+    margin-bottom: -$margin;
+    margin-right: -$margin;
+    display: flex;
+    flex-wrap: wrap;
+    > * {
+      margin-bottom: $margin;
+      margin-right: $margin;
+    }
+  }
+}
+
+@each $name, $minWidth in $medias {
+
+  @media (min-width: $minWidth) {
+    
+    @for $i from 1 through $columnNumber {
+      .#{$name}col-#{$i} {
+        flex-basis: calc(#{$i} * 100% / #{$columnNumber} - #{$margin});
+      }
+    }
+
+    .flex-grid.#{$name}justify-center > div {
+      justify-content: center;
+    }
+    
+    .flex-grid.#{$name}justify-between > div {
+      justify-content: space-between;
+    }
+
+    .flex-grid.#{$name}justify-around > div {
+      justify-content: space-around;
+    }
+
+    .#{$name}mr-auto {
+      margin-right: auto;
+    }
+    .#{$name}ml-auto {
+      margin-left: auto;
+    }
+  }
+
+}

@@ -1,0 +1,33 @@
+@each $name, $minWidth in $medias {
+
+  @media (min-width: $minWidth) {
+    
+    @for $i from 1 through $columnNumber {
+      .#{$name}offset-l-#{$i} {
+        margin-left: calc(#{$i} * 100% / #{$columnNumber});
+      }
+      .#{$name}offset-r-#{$i} {
+        margin-right: calc(#{$i} * 100% / #{$columnNumber} + #{$margin}) !important;
+      }
+    }
+
+    .flex-grid.#{$name}justify-center > div {
+      justify-content: center;
+    }
+    
+    .flex-grid.#{$name}justify-between > div {
+      justify-content: space-between;
+    }
+
+    .flex-grid.#{$name}justify-around > div {
+      justify-content: space-around;
+    }
+
+    .#{$name}mr-auto {
+      margin-right: auto;
+    }
+    .#{$name}ml-auto {
+      margin-left: auto;
+    }
+  }
+}
