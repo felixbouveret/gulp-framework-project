@@ -48,6 +48,7 @@ You will be able to choose variables to customise the framework. These variables
 Colors Handler needs colors variables to work. It will generate your colors for **background-color**, **text color** and **border-color** letting you chose what amount of opacity you want. 
 
 They can be use like so:
+
     class="border-YOUR-VARIABLE-50"       // border-color with 50% opacity 
     class="text-YOUR-VARIABLE-30"         // text-color with 30% opacity 
     class="background-YOUR-VARIABLE-100"  // background-color with 100% opacity 
@@ -57,6 +58,7 @@ They can be use like so:
 Create a grid with flex is super easy with the framework. Just tel the number of columns you want in the variable file and it will generate css classes for you.
 
 Here is an exemple of how to use it:
+
     // in variable file
     $columnNumber : 12;
 
